@@ -1,6 +1,6 @@
 {
   "name": "test-bump",
-  "version": "1.0.10000",
+  "version": "2.0.9999",
   "private": true,
   "dependencies": {},
   "devDependencies": {

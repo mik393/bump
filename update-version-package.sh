@@ -14,11 +14,10 @@ update_version(){
     version_split=( ${old_version//./ } )
 
     #increment the number at the proper position ( 0,1,2 )
-    echo ${version_split[2] == 999}
-    if ${version_split[2] == 999}
+    if [[ (${version_split[2]} -eq 999) ]]
     then
         ((version_split[1]++))
-        ((version_split[2] = '000'))
+        ((version_split[2] = "000"))
     else
         ((version_split[2]++))
     fi
@@ -39,4 +38,4 @@ npm version | head -1
 
 # track the change
 git add package.json
-git commit --amend
+#git commit --amend
